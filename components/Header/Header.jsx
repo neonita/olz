@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "./Logo";
+import Navbar from "../Navbar/Navbar";
 
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
@@ -8,20 +9,32 @@ const Header = () => {
   console.log(nav);
 
   return (
-    <header className="border-b border-gray-200 bg-white h-[72px] w-screen flex items-center justify-between px-6 absolute">
-      <h1 className="w-44 h-auto relative left-[50%] translate-x-[-50%] hover:bg-black hover:text-white py-2 px-[0.2em]">
-        <Logo />
-      </h1>
+    <header className="h-auto w-screen">
+      <section className="border-b border-gray-200 bg-white h-[72px] w-full flex items-center justify-between px-6 absolute z-50">
+        <h1 className="w-44 h-auto relative md:static left-[50%] translate-x-[-50%] md:translate-x-0 hover:bg-black hover:text-white py-2 px-[0.2em]">
+          <Logo />
+        </h1>
 
-      <div onClick={() => setNav(!nav)}>
-        {nav ? (
-          // if nav is "true", show close icon
-          <IoMdClose size={30} />
-        ) : (
-          // if nav is "false", show menu icon
-          <IoMdMenu size={30} className="hover:cursor-pointer" />
-        )}
-      </div>
+        <div onClick={() => setNav(!nav)} className="block md:hidden ">
+          {nav ? (
+            // if nav is "true", show close icon
+            <IoMdClose size={32} />
+          ) : (
+            // if nav is "false", show menu icon
+            <IoMdMenu size={32} className="hover:cursor-pointer" />
+          )}
+        </div>
+      </section>
+
+      <section
+        className={
+          nav
+            ? "absolute z-40 left-0 top-[72px]"
+            : "absolute z-40 left-0 top-[-2000px] transition ease-in-out duration-250 md:top-[72px]"
+        }
+      >
+        <Navbar />
+      </section>
     </header>
   );
 };
