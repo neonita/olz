@@ -6,7 +6,6 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 const Header = () => {
   const [nav, setNav] = useState(false); // NOT icon, but the nav/menu
-  console.log(nav);
 
   return (
     <header className="h-auto w-screen">
@@ -26,14 +25,8 @@ const Header = () => {
         </div>
       </section>
 
-      <section
-        className={
-          nav
-            ? "absolute z-40 left-0 top-[72px]"
-            : "absolute z-40 left-0 top-[-2000px] transition ease-in-out duration-250 md:top-[72px]"
-        }
-      >
-        <Navbar />
+      <section>
+        <Navbar navState={nav} />
       </section>
     </header>
   );
