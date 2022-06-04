@@ -1,7 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-import { folder_data } from "../../../folder_data";
+import { folders } from "../../../folderData";
 
 export default function handler(req, res) {
-  res.status(200).json(folder_data);
+  res.status(200).json(folders);
 }
