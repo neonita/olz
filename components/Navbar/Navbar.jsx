@@ -11,7 +11,6 @@ const Navbar = ({ navState }) => {
   const fetchFolders = async () => {
     const response = await fetch("/api/folders");
     const data = await response.json();
-    console.log(data);
 
     setFolders(data);
   };

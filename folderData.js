@@ -10,24 +10,24 @@ export const folders = [
     title: "contact",
     href: "mailto:contact@organiclabzip.com",
     hrefTitle: "contact@organiclabzip.com",
-    description: "contact@organiclabzip.com",
+    description: "",
   },
   {
     title: "submit",
     href: "mailto:submit@organiclabzip.com",
     hrefTitle: "submit@organiclabzip.com",
-    description: "submit@organiclabzip.com",
+    description: "",
   },
   {
     title: "patreon",
     href: "https://www.patreon.com/organiclabzip",
     hrefTitle: "patreon.com/organiclabzip",
-    description: "patreon.com/organiclabzip",
+    description: "",
   },
   {
     title: "instagram",
     href: "https://www.instagram.com/organiclab.zip",
     hrefTitle: "instagram.com/organiclab.zip",
-    description: "instagram.com/organiclab.zip",
+    description: "",
   },
 ];

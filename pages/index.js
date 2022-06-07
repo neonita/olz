@@ -1,5 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import FolderButton from "../components/Navbar/FolderButton";
 import Head from "next/head";
 import Header from "../components/Header/Header";
 
